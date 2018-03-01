@@ -1,3 +1,4 @@
+/*
 test("Threesixty", function() {
   notEqual(typeof($.fn.ThreeSixty), undefined, "Threesixty plugin not defined.");
 });
@@ -83,13 +84,13 @@ test("should return the current frame", function() {
   equal(three60.getCurrentFrame(), 0, 'wrong current frame');
 });
 
-
 asyncTest("Should display the navigation controls", function() {
   ok( true );
   var three60 = $('.car').ThreeSixty({
     	totalFrames: 52,
       endFrame: 30,
       currentFrame: 1,
+      loadedImages: 0,
       imgList: '.threesixty_images',
       progress: '.spinner',
     	imagePath:'../assets/',
@@ -108,3 +109,26 @@ asyncTest("Should display the navigation controls", function() {
     	}
   });
 });
+//*/
+
+window.onload = init;
+
+var car;
+function init(){
+
+    car = $('.car').ThreeSixty({
+        totalFrames: 52, // Total no. of image you have for 360 slider
+        endFrame: 52, // end frame for the auto spin animation
+        currentFrame: 1, // This the start frame for auto spin
+        imgList: '.threesixty_images', // selector for image list
+        progress: '.spinner', // selector to show the loading progress
+        imagePath:'../assets/', // path of the image assets
+        filePrefix: '', // file prefix if any
+        ext: '.png', // extention for the assets
+        height: 447,
+        width: 1000,
+        navigation: true,
+        disableSpin: false,
+    });
+
+}

@@ -6,23 +6,26 @@
 
       <title>jQuery.simpleFAQ QUnit Test Runner</title>
 
-      <link rel='stylesheet' href='../node_modules/qunitjs/qunit/qunit.css'>
+      <!-- <link rel='stylesheet' href='../node_modules/qunitjs/qunit/qunit.css'> -->
 
       <!-- add any external libraries your code needs -->
       <script src='../bower_components/jquery/jquery.js'></script>
 
-      <script src='../src/threesixty.js'></script>
+      <script src='../dist/threesixty.min.js'></script>
+      <!-- <script src='../src/threesixty.js'></script> -->
+      <link rel='stylesheet' href='../src/styles/threesixty.css'>
       <!-- add any JS files under test (or put them in different .html files) -->
 
-      <script src='../node_modules/qunitjs/qunit/qunit.js'></script>
+      <!-- <script src='../node_modules/qunitjs/qunit/qunit.js'></script> -->
 
       <!-- your tests, any and all to run with the given fixtures below -->
-      <script src='default.js'></script>
+      <script src='default.js?v=2'></script>
 
   </head>
   <body>
-    <div id="qunit"></div> <!-- QUnit fills this with results, etc -->
-    <div id='qunit-fixture'>
+    <!-- QUnit fills this with results, etc -->
+    <!-- <div id="qunit"></div>
+    <div id='qunit-fixture'> -->
 
       <div class="threesixty car">
           <div class="spinner">
@@ -31,6 +34,5 @@
           <ol class="threesixty_images"></ol>
       </div>
 
-    </div>
   </body>
 </html>
